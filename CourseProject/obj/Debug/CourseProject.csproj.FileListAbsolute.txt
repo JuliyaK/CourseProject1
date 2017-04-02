@@ -1,0 +1,2 @@
+C:\Users\Positronica\Documents\GitHub\Kursov.Proekt\CourseProject\CourseProjects\CourseProject\CourseProject\bin\Debug\CourseProject.exe.config
+C:\Users\Positronica\Documents\GitHub\CourseProject1\CourseProject\bin\Debug\CourseProject.exe.config
