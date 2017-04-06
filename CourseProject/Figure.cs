@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Cell;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,7 +10,7 @@ namespace CourseProject
     abstract class Figure
     {
         protected string Color;
-        public int Current_Cell(int _x, int _y);
+        public Cell CurrentCell;
         abstract public void Walk();
     }
 }
