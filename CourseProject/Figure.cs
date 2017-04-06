@@ -6,13 +6,10 @@ using System.Threading.Tasks;
 
 namespace CourseProject
 {
-    class Figure
+    abstract class Figure
     {
-        public void Color()
-        {
-            int x;
-            int y;
-
-        }
+        protected string Color;
+        public int Current_Cell(int _x, int _y);
+        abstract public void Walk();
     }
 }
