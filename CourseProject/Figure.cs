@@ -11,6 +11,6 @@ namespace CourseProject
     {
         protected string Color;
         public Cell CurrentCell;
-        abstract public void Walk();
+        public abstract void Walk();
     }
 }
