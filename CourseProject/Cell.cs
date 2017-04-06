@@ -8,8 +8,9 @@ namespace CourseProject
 {
     class Cell
     {
-        public char Color;
-        public int Coordinates;
-        //public class Figure;
+        public void Color;
+        public void CoordinateX;
+        public void CoordinateY;
+        public void Current_Cell(int _x, int _y);
     }
 }
