@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Figure;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,6 +10,7 @@ namespace CourseProject
     class Cell
     {
         public string Color;
+        public Figure CurrentFigure;
         public int CoordinateX;
         public int CoordinateY;
     }
