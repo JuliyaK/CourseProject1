@@ -10,22 +10,44 @@ namespace CourseProject
 {
     class Rook : Figure
     {
-       public override void Walk(Cell newCell)
+        public override void Walk(Cell newCell)
         {
-            if (CurrentCell + CoordinateX >= 1 && CurrentCell + CoordinateX <= 8)
+            x = CoordinateX;
+            y = CoodinateY;
+            try
             {
-                if (CurrentCell + CoordinateX == null)
+                if (CurrentCell.x + newCell.x < 1 && CurrentCell.x + newCell.x > 8 && CurrentCell.y + newCell.y < 1 && CurrentCell.y + newCell.y > 8)
                 {
-                    newCell.CoordinateX;
+                    throw new Exception("Выбранный диапазон не принадлежит шахматной доске");
                 }
             }
-            if (CurrentCell + CoordinateY >= 1 && CurrentCell + CoordinateY <= 8)
+            catch (Exception e)
             {
-                if (CurrentCell + CoordinateY == null)
+                Console.WriteLine("Ошибка: Неправильно выбранн диапозон!");
+            }
+            try
+            {
+                if (CurrentFigure != null)
                 {
-                    newCell.CoordinateY;
+                    throw new Exception("Клетка не пустая");
                 }
             }
+            catch (Exception e)
+            {
+                Console.WriteLine("Ошибка: Клетка занята!");
+            }
+            try
+            {
+                if(CurrentCell.x != newCell.x && CurrentCell.y != newCell.y)
+                {
+                    throw new Exception("Ладья имеет другой алгоритм движения");
+                }
+            }
+            catch(Exception e)
+            {
+                Console.WriteLine("Ошибка: Ход невозможен");
+            }
+            CurrentCell = newCell;
         }
     }
 }
