@@ -10,20 +10,20 @@ namespace CourseProject
 {
     class Rook : Figure
     {
-       public override void Walk(Cell CoordinateX, Cell CoordinateY)
+       public override void Walk(Cell newCell)
         {
             if (CurrentCell + CoordinateX >= 1 && CurrentCell + CoordinateX <= 8)
             {
                 if (CurrentCell + CoordinateX == null)
                 {
-                    Walk(CoordinateX);
+                    newCell.CoordinateX;
                 }
             }
             if (CurrentCell + CoordinateY >= 1 && CurrentCell + CoordinateY <= 8)
             {
                 if (CurrentCell + CoordinateY == null)
                 {
-                    Walk(CoordinateY);
+                    newCell.CoordinateY;
                 }
             }
         }
