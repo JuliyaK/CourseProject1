@@ -10,17 +10,20 @@ namespace CourseProject
 {
     class Rook : Figure
     {
-       public override void Walk()
+       public override void Walk(Cell CoordinateX, Cell CoordinateY)
         {
-            for (CoordinateX = 1; CoordinateX <= 8; CoordinateX++)
+            if (CurrentCell + CoordinateX >= 1 && CurrentCell + CoordinateX <= 8)
             {
-                for (CoordinateY = 1; CoordinateY <= 8; CoordinateY++)
+                if (CurrentCell + CoordinateX == null)
                 {
-                    if ((CoordinateX + 1 == null && (CoordinateX + 1 >= 1 && CoordinateX <= 8)) || (CoordinateX - 1 == null && (CoordinateX + 1 >= 1 && CoordinateX <= 8)) || 
-                       (CoordinateY + 1 == null && (CoordinateY + 1 >= 1 && CoordinateY <= 8)) || (CoordinateY-1 && (CoordinateY + 1 >= 1 && CoordinateY <= 8)))
-                    {
-                        //Фигура может сделать ход
-                    }
+                    Walk(CoordinateX);
+                }
+            }
+            if (CurrentCell + CoordinateY >= 1 && CurrentCell + CoordinateY <= 8)
+            {
+                if (CurrentCell + CoordinateY == null)
+                {
+                    Walk(CoordinateY);
                 }
             }
         }
