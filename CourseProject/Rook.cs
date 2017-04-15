@@ -24,7 +24,9 @@ namespace CourseProject
             {
                 throw new Exception("Ладья имеет другой алгоритм движения");
             }
+            CurrentCell.CurrentFigure = null;
             CurrentCell = newCell;
+            newCell.CurrentFigure = this;
         }
     }
 }
