@@ -6,8 +6,28 @@ using System.Threading.Tasks;
 
 namespace CourseProject
 {
-    class Pawn
+    class Pawn : Figure
     {
-        public int Walk;
+        public override void Walk(Cell newCell)
+        {
+            int x = newCell.CoordinateX;
+            int y = newCell.CoordinateY;
+            if (x < 1 && x > 8 && y < 1 && y > 8)
+            {
+                throw new Exception("Выбранный диапазон не принадлежит шахматной доске");
+            }
+            if (newCell.CurrentFigure != null)
+            {
+                throw new Exception("Клетка не пустая");
+            }
+            if (CurrentCell.CoordinateX != y)
+            {
+                throw new Exception("Фигура 'ПЕШКА' имеет другой алгоритм движения");
+            }
+            CurrentCell.CurrentFigure = null;
+            CurrentCell = newCell;
+            newCell.CurrentFigure = this;
+        }
+
     }
 }

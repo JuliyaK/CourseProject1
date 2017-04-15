@@ -22,7 +22,7 @@ namespace CourseProject
             }
             if (CurrentCell.CoordinateX != x || CurrentCell.CoordinateY != y)
             {
-                throw new Exception("Ладья имеет другой алгоритм движения");
+                throw new Exception("Фигура 'ЛАДЬЯ' имеет другой алгоритм движения");
             }
             CurrentCell.CurrentFigure = null;
             CurrentCell = newCell;
