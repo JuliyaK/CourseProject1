@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Figure;
-using System.Cell;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,15 +13,15 @@ namespace CourseProject
         {
             x = CoordinateX;
             y = CoodinateY;
-            if (CurrentCell.x + newCell.x < 1 && CurrentCell.x + newCell.x > 8 && CurrentCell.y + newCell.y < 1 && CurrentCell.y + newCell.y > 8)
+            if (newCell.x < 1 && newCell.x > 8 && newCell.y < 1 && newCell.y > 8)
             {
                 throw new Exception("Выбранный диапазон не принадлежит шахматной доске");
             }
-            if (CurrentFigure != null)
+            if (CurrentFigure == newCell)
             {
                 throw new Exception("Клетка не пустая");
             }
-            if (CurrentCell.x != newCell.x && CurrentCell.y != newCell.y)
+            if (CurrentCell.x != newCell.x || CurrentCell.y != newCell.y)
             {
                 throw new Exception("Ладья имеет другой алгоритм движения");
             }
