@@ -20,7 +20,7 @@ namespace CourseProject
             {
                 throw new Exception("Клетка не пустая");
             }
-            if (x != x || y != y)
+            if (CurrentCell.CoordinateX != x || CurrentCell.CoordinateY != y)
             {
                 throw new Exception("Ладья имеет другой алгоритм движения");
             }
