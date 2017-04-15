@@ -11,7 +11,7 @@ namespace CourseProject
         protected string Color;
         public Cell CurrentCell;
         public abstract void Walk();
-        public void Cheking()
+        public abstract void Cheking()
         {
             if (x < 1 && x > 8 && y < 1 && y > 8)
             {
