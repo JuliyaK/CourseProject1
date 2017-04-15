@@ -13,6 +13,8 @@ namespace CourseProject
         public abstract void Walk();
         public abstract void Cheking()
         {
+            int x = newCell.CoordinateX;
+            int y = newCell.CoordinateY;
             if (x < 1 && x > 8 && y < 1 && y > 8)
             {
                 throw new Exception("Выбранный диапазон не принадлежит шахматной доске");

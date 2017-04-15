@@ -10,8 +10,6 @@ namespace CourseProject
     {
         public override void Walk(Cell newCell)
         {
-            int x = newCell.CoordinateX;
-            int y = newCell.CoordinateY;
             this.Checking();
             if (CurrentCell.CoordinateX != y)
             {
