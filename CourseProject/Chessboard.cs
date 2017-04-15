@@ -6,18 +6,27 @@ using System.Threading.Tasks;
 
 namespace CourseProject
 {
-    class Chessboard : Cell
+    class Chessboard
     {
-        public override void MakeCells(Cell ArrayCell)
+        public string Color;
+        public void MakeCells()
         {
-            int x = ArrayCell.CoordinateX;
-            int y = ArrayCell.CoordinateY;
+
+            int x;
+            int y;
             int[,] arrayCells = new int[8, 8];
             for (x = 1; x <= 8; x++)
             {
-                for(y = 1; y <= 8; y++)
+                for(y = 8; y >= 1; y--)
                 {
-                   // if()
+                    if(arrayCells[x,y] / 2 == 0 )
+                    {
+                        arrayCells[x, y] = Color.White;
+                    }
+                    else
+                    {
+                        arrayCells[x, y] = Color.Black;
+                    }
                 }
             }
         }
