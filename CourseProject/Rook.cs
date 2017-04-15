@@ -1,5 +1,4 @@
 ﻿using System;
-using System.Figure;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -17,7 +16,7 @@ namespace CourseProject
             {
                 throw new Exception("Выбранный диапазон не принадлежит шахматной доске");
             }
-            if (CurrentFigure == newCell)
+            if (newCell.CurrentFigure != null)
             {
                 throw new Exception("Клетка не пустая");
             }
