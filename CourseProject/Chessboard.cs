@@ -8,6 +8,6 @@ namespace CourseProject
 {
     class Chessboard : Cell
     {
-        
+        //Наследуется класс Cell
     }
 }
