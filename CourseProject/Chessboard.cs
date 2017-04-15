@@ -6,8 +6,8 @@ using System.Threading.Tasks;
 
 namespace CourseProject
 {
-    class Chessboard
+    class Chessboard : Cell
     {
-        //public class Cell;
+        
     }
 }
