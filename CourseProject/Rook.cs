@@ -10,9 +10,9 @@ namespace CourseProject
     {
         public override void Walk(Cell newCell)
         {
-            x = CoordinateX;
-            y = CoodinateY;
-            if (newCell.x < 1 && newCell.x > 8 && newCell.y < 1 && newCell.y > 8)
+            int x = CoordinateX;
+            int y = CoordinateY;
+            if (x < 1 && x > 8 && y < 1 && y > 8)
             {
                 throw new Exception("Выбранный диапазон не принадлежит шахматной доске");
             }
