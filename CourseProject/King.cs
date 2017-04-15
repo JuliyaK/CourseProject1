@@ -20,8 +20,7 @@ namespace CourseProject
             {
                 throw new Exception("Клетка не пустая");
             }
-            if (CurrentCell.CoordinateX != (x + 1) || CurrentCell.CoordinateX != (x - 1) || CurrentCell.CoordinateY != (y + 1) || CurrentCell.CoordinateY != (y - 1)
-                || (CurrentCell.CoordinateX != (x + 1) && CurrentCell.CoordinateY != (y + 1)) || (CurrentCell.CoordinateX != (x - 1) && CurrentCell.CoordinateY != ( y - 1)))
+            if (CurrentCell.CoordinateX - x != 1)
             {
                 throw new Exception("Фигура 'КОРОЛЬ' имеет другой алгоритм движения");
             }
