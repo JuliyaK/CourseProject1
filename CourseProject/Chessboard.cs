@@ -8,27 +8,35 @@ namespace CourseProject
 {
     class Chessboard
     {
-        public string Color;
+        public Cell arrayCells;
         public void MakeCells()
         {
 
-            int x;
-            int y;
-            int[,] arrayCells = new int[8, 8];
-            for (x = 1; x <= 8; x++)
+            arrayCells = new Cell[64];
+            for (int i = 0; i <= 63; i++)
             {
-                for(y = 8; y >= 1; y--)
+                arrayCells[i] = new Cell();
+                if(i%2 == 0)
                 {
-                    if(arrayCells[x,y] / 2 == 0 )
-                    {
-                        arrayCells[x, y] = Color.White;
-                    }
-                    else
-                    {
-                        arrayCells[x, y] = Color.Black;
-                    }
+                    arrayCells[i].Color = string.White;
+                }
+                else
+                {
+                    arrayCells[i].Color = string.Black;
                 }
             }
+            Cell X = new Cell();
+            Cell Y = new Cell();
+            int x = X.CoordinateX;
+            int y = Y.CoordinateY;
+            for (int j = 0; j <= 63; j++)
+            {
+                if (j % 8 == 0)
+                {
+                    y = y + 1;
+                    x = 1;
+                }
+            }  
         }
     }
 }
