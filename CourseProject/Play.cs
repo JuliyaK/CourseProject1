@@ -9,9 +9,9 @@ namespace CourseProject
     class Play
     {
         public void NewPlay;
-        public Chessboard GameBoard()
+        public Chessboard CreateChessboard()
         {
-            return GameBoard;
+            return new Chessboard();
         }
     }
 }
