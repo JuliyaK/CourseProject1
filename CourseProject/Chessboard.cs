@@ -11,6 +11,8 @@ namespace CourseProject
         public Cell arrayCells;
         public void MakeCells()
         {
+            int x = 0;
+            int y = 0;
 
             arrayCells = new Cell[64];
             for (int i = 0; i <= 63; i++)
@@ -18,25 +20,21 @@ namespace CourseProject
                 arrayCells[i] = new Cell();
                 if(i%2 == 0)
                 {
-                    arrayCells[i].Color = string.White;
+                    arrayCells[i].Color = "White";
                 }
                 else
                 {
-                    arrayCells[i].Color = string.Black;
+                    arrayCells[i].Color = "Blak";
                 }
-            }
-            Cell X = new Cell();
-            Cell Y = new Cell();
-            int x = X.CoordinateX;
-            int y = Y.CoordinateY;
-            for (int j = 0; j <= 63; j++)
-            {
-                if (j % 8 == 0)
+                if(i % 8 == 0)
                 {
                     y = y + 1;
                     x = 1;
                 }
-            }  
+                x++;
+                arrayCells[i].CoordinateX = "x";
+                arrayCells[i].CoordinateY = "y";
+            }
         }
     }
 }
