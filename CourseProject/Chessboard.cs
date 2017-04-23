@@ -73,8 +73,19 @@ namespace CourseProject
                 {
                     figure = new Pawn();
                 }
-            }
-                
+
+                if((x == 1 && x == 2) && (y >=1 && y <= 8))
+                {
+                    Figure.Color = "White";
+                }
+                if((x == 7 && x == 8) && (y >= 1 && y <= 8))
+                {
+                    Figure.Color = "Black";
+                }
+
+                Figure.Cell = arrayCells[i];
+                arrayCells[i].Figure = figure;
+            }  
         }
     }
 }
