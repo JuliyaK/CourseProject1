@@ -44,37 +44,34 @@ namespace CourseProject
             for(int i = 0; i <= 63; i++)
             {
 
-                if((x == 1 && y == 1) && (x == 1 && y == 8) && (x == 8 && y == 1) && (x == 8 && y == 8))
+                if((x == 1 && y == 1) || (x == 1 && y == 8) || (x == 8 && y == 1) || (x == 8 && y == 8))
                 {
                     figure = new Rook();
                 }
 
-                if ((x == 1 && y == 2) && (x == 1 && y == 7) && (x == 8 && y == 2) && (x == 8 && y == 7))
+                if ((x == 1 && y == 2) || (x == 1 && y == 7) || (x == 8 && y == 2) || (x == 8 && y == 7))
                 {
                     figure = new Kinght();
                 }
 
-                if ((x == 1 && y == 3) && (x == 1 && y == 6) && (x == 8 && y == 3) && (x == 8 && y == 6))
+                if ((x == 1 && y == 3) || (x == 1 && y == 6) || (x == 8 && y == 3) || (x == 8 && y == 6))
                 {
                     figure = new Bishop();
                 }
 
-                if ((x == 1 && y == 4) && (x == 8 && y == 4))
+                if ((x == 1 && y == 4) || (x == 8 && y == 4))
                 {
                     figure = new Queen();
                 }
 
-                if ((x == 1 && y == 5) && (x == 8 && y == 5))
+                if ((x == 1 && y == 5) || (x == 8 && y == 5))
                 {
                     figure = new King();
                 }
 
-                for (x = 2; x <= 7; x++)
+                if ((x == 2 && (y >= 1 && y <= 8)) || (x == 7 && (y >= 1 && y <= 8)))
                 {
-                    for (y = 1; y <= 8; y++)
-                    {
-                        figure = new Pawn();
-                    }
+                    figure = new Pawn();
                 }
             }
                 
