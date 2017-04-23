@@ -8,7 +8,6 @@ namespace CourseProject
 {
     class Play
     {
-        public void NewPlay();
         public Chessboard CreateChessboard()
         {
             return new Chessboard();
