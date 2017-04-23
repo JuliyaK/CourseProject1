@@ -26,15 +26,58 @@ namespace CourseProject
                 {
                     arrayCells[i].Color = "Blak";
                 }
-                if(i % 8 == 0)
+                if(i%8 == 0)
                 {
                     y = y + 1;
                     x = 1;
                 }
                 x++;
-                arrayCells[i].CoordinateX = "x";
-                arrayCells[i].CoordinateY = "y";
+                arrayCells[i].CoordinateX = x;
+                arrayCells[i].CoordinateY = y;
             }
+        }
+        public void LocationFigures()
+        {
+            arrayCells[i].CoordinateX = x;
+            arrayCells[i].CoordinateY = y;
+            Figure figure = null;
+            for(int i = 0; i <= 63; i++)
+            {
+
+                if((x == 1 && y == 1) && (x == 1 && y == 8) && (x == 8 && y == 1) && (x == 8 && y == 8))
+                {
+                    figure = new Rook();
+                }
+
+                if ((x == 1 && y == 2) && (x == 1 && y == 7) && (x == 8 && y == 2) && (x == 8 && y == 7))
+                {
+                    figure = new Kinght();
+                }
+
+                if ((x == 1 && y == 3) && (x == 1 && y == 6) && (x == 8 && y == 3) && (x == 8 && y == 6))
+                {
+                    figure = new Bishop();
+                }
+
+                if ((x == 1 && y == 4) && (x == 8 && y == 4))
+                {
+                    figure = new Queen();
+                }
+
+                if ((x == 1 && y == 5) && (x == 8 && y == 5))
+                {
+                    figure = new King();
+                }
+
+                for (x = 2; x <= 7; x++)
+                {
+                    for (y = 1; y <= 8; y++)
+                    {
+                        figure = new Pawn();
+                    }
+                }
+            }
+                
         }
     }
 }
